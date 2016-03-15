@@ -1,3 +1,74 @@
 body {
   background-color: white;
   }
+
+#father_up{
+  width:900px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  }
+
+  #father_down{
+    width:900px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    }
+
+.banner{
+  display: inline-block;
+  width: 47%;
+
+}
+
+.form{
+  background-color: white;
+  width: 48%;
+  margin: 10px 20px 10px 20px;
+  padding: 10px;
+  text-align: center;
+  box-sizing: border-box;
+  display: inline-block;
+  }
+
+.footer_images{
+  display: inline-block;
+  width: 33%;
+  text-align: center;
+  white-space: nowrap;
+  font-size: 12px;
+  overflow: hidden;
+}
+
+.color
+  {
+    color:#FFFFFF;
+    font-family:fantasy;
+  }
+.left{
+  text-align:left;
+  margin:0px 10px 0px 10px;
+}
+
+.images-style
+  {
+    display: inline-block;
+    padding-right: 30px;
+  }
+.grey{
+  color:rgba(152, 160, 163, 0.6);
+  font-family: arial;
+  text-align: center;
+}
+
+.black{
+  color:rgba(5,5,5,0.8);
+  font-family: sans-serif;
+}
+
+.button{
+  text-align: center;
+  background-color: rgba(54, 184, 227, 0.9);
+  color: rgb(252, 252, 252);
+  font-family: sans-serif;
+  border-radius: 2px;
+}
