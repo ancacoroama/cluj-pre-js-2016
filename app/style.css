@@ -63,6 +63,7 @@ body {
 .black{
   color:rgba(5,5,5,0.8);
   font-family: sans-serif;
+  text-align: center;
 }
 
 .button{
