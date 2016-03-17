@@ -71,23 +71,21 @@ body {
 }
 
 .black{
-<<<<<<< HEAD
-  color:rgba(5,5,5,0.9);
-=======
+
   color:rgba(5,5,5,0.8);
->>>>>>> b389319... css2
+
   font-family: arial;
   font-weight: bold;
 }
 
 .button{
-<<<<<<< HEAD
+
   background-color:#008ae6;
   color: rgb(252, 252, 252);
   font-family: sans-serif;
   border-radius: 2px;
   padding: 10px 30px;
-=======
+
   background-color: rgba(54, 184, 227, 0.9);
   color: rgb(252, 252, 252);
   font-family: sans-serif;
