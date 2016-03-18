@@ -22,11 +22,13 @@ body {
 #search{
   text-align: left;
   width: 700px;
-  padding: 7px;
+  padding: 7px 7px 7px 20px;
   background-color: rgba(136, 168, 168, 0.5);
   display: inline-block;
+  background-image: url('../core/assets/search-icon.png');
+  background-repeat: no-repeat;
+  color: white;
   }
-
 
 #join{
   margin: auto;
@@ -71,13 +73,13 @@ body {
   width:20%;
   margin: 10px;
   box-sizing: border-box;
-
   display: inline-block;
   hite-space: nowrap;
  overflow: hidden;
  color:rgba(152, 160, 163, 0.6);
  font-size: 16.5px;
  background-color: white;
+ box-shadow: 10px 10px 5px #888888;
    }
 
 .banner{
@@ -229,3 +231,66 @@ tr{
 .tr{
   border-bottom: 1px solid #ffffff;
   }
+
+.container button{
+  visibility: hidden;
+}
+
+.container:hover button{
+  visibility: visible;
+}
+
+.container:hover{
+  transition: 0.5s;
+  transform: translate(0, -15px);
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+button{
+  background-color: rgba(29, 169, 240, 0.9);
+  padding: 10px;
+  font-family: sans-serif;
+  color: white;
+  }
+
+background_image{
+  background-repeat: no-repeat;}
+
+
+placeholder{
+  margin-left: 20px;
+}
+
+#play{
+  margin-left: 30px;
+  width: 45%;
+  bottom: 0;
+  padding-top: 10px;
+  background-color: white;
+  visibility: hidden;
+  position: fixed;
+  }
+
+table2{
+  background-color:white;
+  border: 1px solid #99e6ff;
+  margin: 0 auto;
+  border-collapse: collapse;
+  width: 750px;
+  background-color: white;
+  font-size: 0.8em;
+  }
+
+div1{
+  vertical-align: bottom;
+  float: left;
+}
+
+div2{
+  margin-left: 157px;
+    background-color:red;
+}
+
+div3.clear{
+  clear:both;
+}
