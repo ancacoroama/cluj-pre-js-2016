@@ -269,6 +269,7 @@ placeholder{
   background-color: white;
   visibility: hidden;
   position: fixed;
+  overflow: scroll;
   }
 
 table2{
@@ -288,15 +289,13 @@ div1{
 
 div2{
   margin-left: 157px;
-    background-color:red;
-}
+    }
 
 div3.clear{
   clear:both;
 }
 
 #div_song{
-  background-color: red;
   width: 500px;
 
 }
