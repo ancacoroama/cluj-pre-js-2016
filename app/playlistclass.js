@@ -1,6 +1,6 @@
 
-function Playlist(){
-  this.name=name;
+function Playlist(path){
+  this.name="";
   this.songList=[];
 }
 

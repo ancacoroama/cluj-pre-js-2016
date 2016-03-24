@@ -2,6 +2,7 @@ var JSONparse=JSON.parse(playlistsJSON);//parsare piese si in functia Pop_Up
 
 
 function Song(path){
+  console.log("2:"+path);
   this.image=path.image;
   this.title=path.songTitle;
   this.artist=path.songAuthor;
@@ -9,27 +10,27 @@ function Song(path){
   this.listened=path.songListened;
   }
 
-/*Song.prototype.getSongTitle(){
+Song.prototype.getSongTitle= function(){
 
-  return this.songTitle;
+  return this.songTitle ;
 }
 
-Song.prototype.getSongAuthor(){
+Song.prototype.getSongAuthor= function(){
 
   return this.songAuthor;
 }
 
-Song.prototype.getSongLength(){
+Song.prototype.getSongLength= function(){
 
   return this.songLength;
 }
 
-Song.prototype.getSongListened(){
+Song.prototype.getSongListened= function(){
 
   return this.songListened;
 }
 
-Song.prototype.getSongImage(){
+Song.prototype.getSongImage= function(){
 
-  return this.songimage;
-}*/
+  return this.image;
+}

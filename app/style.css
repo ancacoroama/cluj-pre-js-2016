@@ -294,3 +294,9 @@ div2{
 div3.clear{
   clear:both;
 }
+
+#div_song{
+  background-color: red;
+  width: 500px;
+
+}
