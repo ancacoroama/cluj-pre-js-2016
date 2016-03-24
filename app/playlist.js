@@ -14,6 +14,7 @@
   //    console.log(JSONparse); //parsare si afisare pe consola
   //console.log(usersJSON);
 
+<<<<<<< HEAD
       var currentPlaylist= new Playlist(playlists[0]); //creare playlistul meu curent
       console.log(playlists[0]);// e ok
       console.log(currentPlaylist);// e ok
@@ -30,6 +31,27 @@
    {
      var song = new Song(playlists[0].songs[i]);
   //console.log("1:"+playlists[0].songs[i]);
+=======
+function Pop_Up(){
+document.getElementById('play').style.transition= "all 0.5s";
+document.getElementById('play').style.visibility= "visible";
+document.getElementById('play').style.height = "500px";
+
+
+//console.log(JSONparse); //parsare si afisare pe consola
+//console.log(usersJSON);}
+var currentPlaylist= new Playlist(); //creare playlistul meu curent
+
+for (var i = 0; i < playlists[0].songs.length; i++) {
+  var song = new Song(playlists[0].songs[i]);
+  currentPlaylist.addSong(song);
+  console.log(currentPlaylist.songList);
+}
+
+functia Sign_up_free{
+  
+
+>>>>>>> second_week
 }
 
     for( var i=0; i< currentPlaylist.songList.length; i++){

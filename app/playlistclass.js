@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 function Playlist(path){
 //  console.log("ceva"+path);
   this.id=path.id;
@@ -34,4 +35,13 @@ Playlist.prototype.setPlaylistName = function(name){
 
 Playlist.prototype.setlistSongs = function(index, songList){
   this.songList[index]=songList;
+=======
+function Playlist(){
+  this.name=name;
+  this.songList=[];
+}
+
+Playlist.prototype.addSong=function(s){
+  this.songList.push(s)
+>>>>>>> second_week
 }

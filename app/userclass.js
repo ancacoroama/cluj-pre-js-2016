@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> second_week
 var Users= JSON.parse(usersJSON);
 
 function User(path){
