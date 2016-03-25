@@ -1,6 +1,7 @@
 function Login(){
-        window.location.href="account_signin.html";
-  }
+  window.location.href="account_signin.html";
+}
+
 var playlists = JSON.parse(playlistsJSON);
 
 function Pop_Up(){
@@ -17,10 +18,10 @@ var iDiv= document.createElement('div');
   document.getElementById('play').appendChild(iDiv);
 
 for (var i = 0; i < playlists[0].songs.length; i++) {
-    var song = new Song(playlists[0].songs[i]);
+  var song = new Song(playlists[0].songs[i]);
 }
 
-      for( var i=0; i< currentPlaylist.songList.length; i++){
+for( var i=0; i< currentPlaylist.songList.length; i++){
 
           var contentDiv = document.createElement('div');
           contentDiv.id = 'div_song';

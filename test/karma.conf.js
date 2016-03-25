@@ -5,7 +5,7 @@ module.exports = function(config) {
         files: [
             'app/playlists.js',
             'app/**/*.js',
-            'tests/unit/**/*.js'
+            'test/units/**/*.js'
 
         ],
         autoWatch: true,
