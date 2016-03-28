@@ -299,3 +299,19 @@ div3.clear{
   width: 500px;
 
 }
+
+#promise{
+  font-family: cursive;
+}
+
+#metalica{
+  background-color: white;
+  width:80%;
+  margin: 100px;
+  box-sizing: border-box;
+  display: inline-block;
+  color:white;
+  font-size: 17.5px;
+   background-color: rgb(100,200,143);
+   box-shadow: 10px 10px 5px #888888;
+}

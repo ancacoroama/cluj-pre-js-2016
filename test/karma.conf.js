@@ -3,6 +3,7 @@ module.exports = function(config) {
         basePath: '../',
         frameworks: ["jasmine"],
         files: [
+            'core/**/*.js',
             'app/playlists.js',
             'app/**/*.js',
             'test/units/**/*.js'
