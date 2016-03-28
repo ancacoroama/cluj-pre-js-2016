@@ -34,28 +34,28 @@ Song.prototype.getimage= function(){
 
   return this.image;
 }
-
-Song.prototype.setSongTitle= function(title){
-
-  this.title= title;
-}
-
-Song.prototype.setSongAuthor= function(artist){
-
-  this.artist= artist;
-}
-
-Song.prototype.setSongLength= function(length){
-
-  this.length=length;
-}
-
-Song.prototype.setSongListened= function(listened){
-
-  this.listened=listened;
-}
-
-Song.prototype.setimage= function(image){
-
-  this.image=image;
-  }
+// 
+// Song.prototype.setSongTitle= function(title){
+//
+//   this.title= title;
+// }
+//
+// Song.prototype.setSongAuthor= function(artist){
+//
+//   this.artist= artist;
+// }
+//
+// Song.prototype.setSongLength= function(length){
+//
+//   this.length=length;
+// }
+//
+// Song.prototype.setSongListened= function(listened){
+//
+//   this.listened=listened;
+// }
+//
+// Song.prototype.setimage= function(image){
+//
+//   this.image=image;
+//   }

@@ -5,9 +5,9 @@ function Playlist(path){
   this.songList=[];
 
   for(var i=0; i< path.songs.length; i++){
+  console.log('11111', path.songs[i]);
+      this.songList.push((new Song(path.songs[i])));
 
-      this.songList.push(new Song(path.songs[i]));
-  //    console.log('11111', path.songs[i]);
   }
   }
 
