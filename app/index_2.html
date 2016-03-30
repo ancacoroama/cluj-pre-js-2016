@@ -1,0 +1,127 @@
+<html>
+  <head>
+    <title>Search</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://backbonejs.org/test/vendor/underscore.js"></script>
+    <script src="http://backbonejs.org/test/vendor/jquery.js"></script>
+    <script src="http://backbonejs.org/docs/js/jquery.lazyload.js"></script>
+    <script src="http://backbonejs.org/backbone.js"></script>
+    <script type="text/javascript" src="song-list-item-view.js">  </script>
+    <script type="text/javascript" src="songs-list-item-view.js">  </script>
+    <script type="text/javascript" src="playlist-item-view.js">  </script>
+    <script type="text/javascript" src="playlists-items-view.js">  </script>
+
+
+  </head>
+
+  <body style="background-color:rgb(237, 234, 221)">
+        <div style="background-image: url(../core/assets/banner-app.jpg)" class="background_image">
+        <div class="color" style="text-align:center">
+                <div>
+                <img src="../core/assets/logo-top.png" alt="logo" class="up_divs1">
+                <input type="type-text" name="Search Music" placeholder="Search music" id="search" class="up_divs2">
+                <input type="submit" value="Sign in" class="button up_divs3" onclick="Login()">
+                </div>
+
+          <h4>Ready to listen to endless music</h4>
+          <h4>on your favorite device ?</h4>
+          <h4 id="join" onclick="Login()">JOIN NOW</h4>
+          <h3 id="promise">Epic and debauched party mixes</h3>
+        </div>
+        </div>
+
+        <div style="text-align:center; margin-top:-120px">
+
+        <div id="playlists-content">
+        <script type="text/template" id="playlists-view">
+              <img src=<%= image %> />
+              <br>
+              <span class="title"><%= title %></span>
+        </script>
+        </div>
+
+        </div>
+
+        <div class="container" >
+          <div id="playlist-content">
+          <script type="text/template" id="play-list-item">
+                <img src=<%= image %> />
+                <br>
+                <span class="title"><%= title %></span>
+          </script>
+          </div>
+        </div>
+
+        <div id="new_playlist">
+            <div1>
+              <img src="../core/assets/up-all-night-small.png">
+            </div1>
+        <div2>
+            <h5 >Playing from:</h5>
+            <h3>Up all night: The remixes radio</h3>
+        </div2>
+        <div3 class="clear">
+        </div3>
+
+      <table style= "width:100%">
+            <tr>
+              <th width=70% >SONG </th>
+              <th>LENGHT </th>
+              <th>LISTENED</th>
+            </tr>
+      </table>
+
+      <div id="page-content">
+      <script type="text/template" id="song-list-item">
+            <img src=<%= image %> />
+            <span class="name"><%= name %></span>
+            <span class="songLength"><%= songLength %></span>
+            <span class="songListened"><%= songListened %></span>
+      </script>
+      </div>
+
+      <div id="songs">
+      <script type="text/template" id="page-content-songs">
+            <img src=<%= image %> />
+            <span class="name"><%= name %></span>
+            <span class="songLength"><%= songLength %></span>
+            <span class="songListened"><%= songListened %></span>
+      </script>
+      </div>
+
+      <script>
+        $(function() {
+          var playlistsJSON = '[{"id":0,"title":"Playlist 1","image":"../core/assets/up-all-night-small.png","songs":[{"image":"../core/assets/2015-best-music.png","songTitle":"love love enemies love","songAuthor":"Smiley","songLength":74,"songListened":82},{"image":"../core/assets/2015-best-music.png","songTitle":"love love enemies pierdut","songAuthor":"Dr. Dre","songLength":186,"songListened":78},{"image":"../core/assets/2015-best-music.png","songTitle":"ea money pierdut ea","songAuthor":"Andra","songLength":303,"songListened":94},{"image":"../core/assets/2015-best-music.png","songTitle":"enemies el buletin ea","songAuthor":"Andra","songLength":359,"songListened":23},{"image":"../core/assets/2015-best-music.png","songTitle":"buletin el buletin love","songAuthor":"Eminem","songLength":312,"songListened":11},{"image":"../core/assets/2015-best-music.png","songTitle":"pierdut pierdut enemies ea","songAuthor":"Eminem","songLength":37,"songListened":9},{"image":"../core/assets/2015-best-music.png","songTitle":"ea money enemies enemies","songAuthor":"Dr. Dre","songLength":325,"songListened":13},{"image":"../core/assets/2015-best-music.png","songTitle":"enemies money el money","songAuthor":"Eminem","songLength":58,"songListened":10}]},{"id":1,"title":"Playlist 2","image":"../core/assets/up-all-night-small.png","songs":[{"image":"../core/assets/2015-best-music.png","songTitle":"money money love ea","songAuthor":"Dr. Dre","songLength":97,"songListened":100},{"image":"../core/assets/2015-best-music.png","songTitle":"el pierdut pierdut ea","songAuthor":"Smiley","songLength":42,"songListened":86},{"image":"../core/assets/2015-best-music.png","songTitle":"enemies money pierdut enemies","songAuthor":"Dr. Dre","songLength":454,"songListened":23},{"image":"../core/assets/2015-best-music.png","songTitle":"money ea love buletin","songAuthor":"Dr. Dre","songLength":448,"songListened":16},{"image":"../core/assets/2015-best-music.png","songTitle":"buletin pierdut ea el","songAuthor":"Dr. Dre","songLength":363,"songListened":23},{"image":"../core/assets/2015-best-music.png","songTitle":"el love el buletin","songAuthor":"Smiley","songLength":88,"songListened":20}]},{"id":2,"title":"Playlist 3","image":"../core/assets/up-all-night-small.png","songs":[{"image":"../core/assets/2015-best-music.png","songTitle":"enemies enemies el love","songAuthor":"Smiley","songLength":192,"songListened":51},{"image":"../core/assets/2015-best-music.png","songTitle":"el enemies pierdut el","songAuthor":"Andra","songLength":232,"songListened":87},{"image":"../core/assets/2015-best-music.png","songTitle":"ea enemies pierdut enemies","songAuthor":"Smiley","songLength":234,"songListened":5},{"image":"../core/assets/2015-best-music.png","songTitle":"enemies ea enemies buletin","songAuthor":"Andra","songLength":123,"songListened":45},{"image":"../core/assets/2015-best-music.png","songTitle":"love money buletin love","songAuthor":"Andra","songLength":299,"songListened":13},{"image":"../core/assets/2015-best-music.png","songTitle":"el love ea love","songAuthor":"Andra","songLength":478,"songListened":34},{"image":"../core/assets/2015-best-music.png","songTitle":"ea el enemies money","songAuthor":"Dr. Dre","songLength":280,"songListened":35}]}]';
+
+          var songJSON = '{"image":"../core/assets/2015-best-music.png","name":"love love enemies pierdut","songAuthor":"Dr. Dre","songLength":186,"songListened":78}';
+          var song = new SongModel(JSON.parse(songJSON));
+          var songView = new SongListItemView({model: song});
+          songView.render();
+          $('#page-content').append(songView.el);
+
+          var songsJSON = '[{"image":"../core/assets/2015-best-music.png","name":"love love enemies love","songAuthor":"Smiley","songLength":74,"songListened":82},{"image":"../core/assets/2015-best-music.png","name":"love love enemies pierdut","songAuthor":"Dr. Dre","songLength":186,"songListened":78},{"image":"../core/assets/2015-best-music.png","name":"ea money pierdut ea","songAuthor":"Andra","songLength":303,"songListened":94},{"image":"../core/assets/2015-best-music.png","name":"enemies el buletin ea","songAuthor":"Andra","songLength":359,"songListened":23},{"image":"../core/assets/2015-best-music.png","name":"buletin el buletin love","songAuthor":"Eminem","songLength":312,"songListened":11},{"image":"../core/assets/2015-best-music.png","name":"pierdut pierdut enemies ea","songAuthor":"Eminem","songLength":37,"songListened":9},{"image":"../core/assets/2015-best-music.png","name":"ea money enemies enemies","songAuthor":"Dr. Dre","songLength":325,"songListened":13},{"image":"../core/assets/2015-best-music.png","name":"enemies money el money","songAuthor":"Eminem","songLength":58,"songListened":10}]';
+          var playlist_songs = new Songs(JSON.parse(songsJSON));
+          var songsView = new SongsListView({collection: playlist_songs});
+          songsView.render();
+          $('#songs').append(songsView.el);
+
+          var playlistJSON = '{"id":0,"title":"Playlist 1","image":"../core/assets/up-all-night-small.png","id":1,"title":"Playlist 2","image":"../core/assets/up-all-night-small.png","id":2,"title":"Playlist 3","image":"../core/assets/up-all-night-small.png"}'
+          var playlist_item = new PlayListModel(JSON.parse(playlistJSON));
+          var playListView = new PlaylistItemView({model: playlist_item});
+          playListView.render();
+          $('#playlist-content').append(playListView.el);
+
+          var playlistsJSON = '[{"id":0,"title":"Playlist 1","image":"../core/assets/up-all-night-small.png"},{"id":1,"title":"Playlist 2","image":"../core/assets/up-all-night-small.png"},{"id":2,"title":"Playlist 3","image":"../core/assets/up-all-night-small.png"}]'
+          var playlist_songs = new PlayListsModels(JSON.parse(playlistsJSON));
+          var playListsView = new PlayListsView({collection: playlist_songs});
+          playListsView.render();
+          $('#playlists-content').append(playListsView.el);
+        });
+
+      </script>
+
+
+    </body>
+</html>
