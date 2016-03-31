@@ -1,65 +1,33 @@
-$(function() {
-  var response = [
-    {
+const PlayListModel = Backbone.Model.extend({
+});
 
-    },
-  ];
-
-
-  var SongModel = Backbone.Model.extend({
-
-  });
-
-
-  var Songs = Backbone.Collection.extend({
-    model: SongModel
-  });
-
-
-  var newSongs = new Songs();
-
-
-
-  var SongView = Backbone.View.extend({
-    template: _.template('<div id="song"><%= name %></div>'),
-    render: function () {
-      this.$el.html(this.template(this.model.attributes));
-      return this;
-    }
-  });
-
-    var SongsView = Backbone.View.extend({
-    className: 'songs',
-
-    render: function () {
-
-      this.$el.html(this.template());
-      var that = this;
-      var partEl = $(this.el.querySelector('#play'));
-      this.collection.forEach(function(model) {
-                var songView = new SongView({
-                  model: model
-                });
-                that.el.appendChild(songView.render().el);
-          });
-    }
-
-  })
-
+const PlayListsModels = Backbone.Collection.extend({
+  model: PlayListModel
 });
 
 
-  var pageView = new SongsView({
-  el: document.getElementById('play'),
-  collection: newSongs
-  });
-
-  pageView.render();
-  debugger;
-
+ PlaylistItemView = Backbone.View.extend({
+  template: function() {
+    const fn = _.template($("script#play-list-item").html());
+    return fn.apply(this, arguments);
+  },
+    className: 'play-list-item',
+    render: function () {
+    this.$el.html(this.template(this.model.attributes));
+    return this;
+  }
 });
 
-for (var i = 0; i < playlists[0].songs.length; i++) {
-  var songModel= new SongModel(playlists[0].songs[i]);
-  newSongs.add(songModel);
-}
+const PlayListsView = Backbone.View.extend({
+  className: 'playlists-view',
+  render: function () {
+    this.$el.html(this.template);
+    const that = this;
+    this.collection.forEach(function(model) {
+      const item = new PlaylistItemView({
+        model: model
+      });
+      that.$el.append(item.render().el);
+    });
+  }
+});

@@ -19,6 +19,8 @@ var iDiv= document.createElement('div');
 
 for (var i = 0; i < playlists[0].songs.length; i++) {
   var song = new Song(playlists[0].songs[i]);
+  var songModel= new SongModel(playlists[0].songs[i]);
+  newSongs.add(songModel);
 }
 
 for( var i=0; i< currentPlaylist.songList.length; i++){
@@ -48,11 +50,11 @@ for( var i=0; i< currentPlaylist.songList.length; i++){
           artist.innerText= song.getSongAuthor();
           contentDiv.appendChild(artist);
 
-          var length = document.createElement('div');
+          var length = document.createElement('div2');
           length.innerText= song.getSongLength();
           contentDiv.appendChild(length);
 
-          var listened = document.createElement('div');
+          var listened = document.createElement('div3');
           listened.innerText= song.getSongListened();
           contentDiv.appendChild(listened);
       }

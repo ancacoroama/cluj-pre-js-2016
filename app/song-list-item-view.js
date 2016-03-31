@@ -1,14 +1,18 @@
-var SongModel = Backbone.Model.extend({
+const SongModel = Backbone.Model.extend({
 });
 
-var SongListItemView = Backbone.View.extend({
-  template: function() {
-    var fn = _.template($("script#song-list-item").html());
-    return fn.apply(this, arguments);
+const SongListItemView = Backbone.View.extend({
+  template: function tpl(...rest) {
+    const fn = _.template($('script#song-list-item').html());
+    return fn.apply(this, rest);
   },
-    className: 'song-list-item',
-    render: function () {
+  className: 'song-list-item',
+  render: function render() {
     this.$el.html(this.template(this.model.attributes));
     return this;
-  }
+  },
 });
+
+
+export { SongListItemView };
+export { SongModel };

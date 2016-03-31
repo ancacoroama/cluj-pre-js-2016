@@ -263,7 +263,7 @@ placeholder{
 
 #play{
   margin-left: 30px;
-  width: 45%;
+  width: 400px;
   bottom: 0;
   padding-top: 10px;
   background-color: white;
@@ -289,7 +289,7 @@ div1{
 
 div2{
   margin-left: 157px;
-    }
+  }
 
 div3.clear{
   clear:both;
@@ -315,3 +315,13 @@ div3.clear{
    background-color: rgb(100,200,143);
    box-shadow: 10px 10px 5px #888888;
 }
+
+#new_playlist{
+  margin-left: 30px;
+  width: 400px;
+  bottom: 0;
+  padding-top: 10px;
+  background-color: white;
+  position: fixed;
+  overflow: scroll;
+  }
