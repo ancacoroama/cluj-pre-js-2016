@@ -1,8 +1,8 @@
-var LOGIN =0;
-var INVALID_PASSWORD =1;
-var INVALID_USERNAME =2;
+const LOGIN =0;
+const INVALID_PASSWORD =1;
+const INVALID_USERNAME =2;
 
-var username= JSON.parse(usersJSON);
+const username= JSON.parse(usersJSON);
 //console.log(username);
 
 function User(path){
@@ -31,9 +31,9 @@ AccountService.prototype.setPassword = function(user){
 
 
 AccountService.prototype.checkLogin = function(){
-  var toReturn =false;
-  for (var i = 0; i < this.usersArray.length; i++) {
-    var tempUser=this.usersArray[i];
+  const toReturn =false;
+  for (const i = 0; i < this.usersArray.length; i++) {
+    const tempUser=this.usersArray[i];
 
     if(tempUser.userName==this.username)
     {
@@ -55,8 +55,8 @@ AccountService.prototype.checkLogin = function(){
 
 function validate()
 {
-  var username= document.getElementById("username").value;
-  var password= document.getElementById("password").value;
+  const username= document.getElementById("username").value;
+  const password= document.getElementById("password").value;
   AccountService.setUsername(username);
   AccountService.setPassword(password);
 

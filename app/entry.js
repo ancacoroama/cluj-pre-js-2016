@@ -1,8 +1,12 @@
+import { viewFunction } from './views.js';
 
-import { Songs } from './songs-list-item-view.js';
-import { SongsListView } from './songs-list-item-view.js';
+$(viewFunction);
+// import { SongsListView } from '../songs/songs-list-item-view.js';
+// import { PlayListsModels } from '../playlist/playlists-items-view.js';
+// import { PlayListsView }  from '../playlist/playlists-items-view.js';
+// import { buildingViews } from './views.js';
 
-import { PlayListsModels } from './playlists-items-view.js';
-import { PlayListsView }  from './playlists-items-view.js';
-
-import { buildingViews } from './views.js';
+// function renderSong() {
+//   const songObj = new Songs();
+//  songObj.render();
+// }
