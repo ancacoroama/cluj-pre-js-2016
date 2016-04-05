@@ -109,5 +109,4 @@ const viewFunction = $(function () {
     pageView.render();
   });
 });
-
 export { viewFunction };

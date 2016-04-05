@@ -13,7 +13,7 @@
     <script type="text/javascript" src="playlist-item-view.js">  </script>
     <script type="text/javascript" src="playlists-items-view.js">  </script> -->
     <script src="../build/bundle.js"></script>
-  </head>
+</head>
 
   <body style="background-color:rgb(237, 234, 221)">
         <div style="background-image: url(../core/assets/banner-app.jpg)" class="background_image">
@@ -77,23 +77,26 @@
             </tr>
       </table>
 
+      <div class="container">
       <div id="page-content">
       <script type="text/template" id="song-list-item">
             <img src=<%= image %> />
-            <span class="name"><%= name %></span>
+            <span class="songAuthor"><%= songAuthor %></span>
             <span class="songLength"><%= songLength %></span>
-            <span class="songListened"><%= songListened %></span>
       </script>
       </div>
+    </div>
+    <div id="songs">
+    <script type="text/template" id="playlistAPI.songs">
+          <img src=<%= image %> />
+          <span class="name"><%= name %></span>
+          <span class="songLength"><%= songLength %></span>
+          <span class="songListened"><%= songListened %></span>
+    </script>
+  </div>
 
-      <div id="songs">
-      <script type="text/template" id="page-content-songs">
-            <img src=<%= image %> />
-            <span class="name"><%= name %></span>
-            <span class="songLength"><%= songLength %></span>
-            <span class="songListened"><%= songListened %></span>
-      </script>
-      </div>
+    </div>
+
 
       </body>
 </html>

@@ -1,24 +1,23 @@
 
-import { SongModel } from './song-list-item-view.js';
+import { SongModel } from './song-model.js';
 import { SongListItemView } from './song-list-item-view.js';
 
-const Songs = Backbone.Collection.extend({
+const SongsCollection = Backbone.Collection.extend({
   model: SongModel,
-});
-
-const SongsListView = Backbone.View.extend({
-  className: 'songs',
-  render: function () {
-    this.$el.html(this.template);
-    const that = this;
-    this.collection.forEach(function(model) {
-      const songView = new SongListItemView({
-        model: model
+},
+  {
+    fromJSON(songsJSON)
+    {
+      const songs = songsJSON.map((song) =>{
+        return {
+          id: +new Date(),
+          image: song.gsx$image.$t,
+          songAuthor: song.gsx$name.$t,
+          songLength: song.gsx$length.$t,
+        };
       });
-      that.el.appendChild(songView.render().el);
-    });
-  }
-});
+      return new SongsCollection(songs);
+    },
+  });
 
-export { Songs };
-export { SongsListView };
+export { SongsCollection };
